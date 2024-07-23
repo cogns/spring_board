@@ -28,12 +28,13 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+//	batch의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-batch'
+//	로그인관련 시큐리티 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+//	타임리프에서 시큐리티 문법을 쓰기위한 라이브러리
+	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 
-	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
-
-	implementation 'javax.servlet:jstl'
-
-	implementation 'io.springfox:springfox-boot-starter:3.0.0'
 }
 
 tasks.named('test') {
